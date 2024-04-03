@@ -11,8 +11,17 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Apr 2024 17:10:23 +0800</lastBuildDate>
     <atom:link href="https://gleiphir2769.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RC_Arc用法</title>
+      <link>https://gleiphir2769.github.io/posts/rc_arc%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Wed, 03 Apr 2024 17:10:23 +0800</pubDate>
+      <guid>https://gleiphir2769.github.io/posts/rc_arc%E7%94%A8%E6%B3%95/</guid>
+      <description>Rc/Arc的用法 如何获取Arc内部的值 Rust中如果想要在多个线程间共享变量T的所有权，必须使用Arc包裹T，通过clone wrapper使用该变量。
+使用中，T的所有权Arc所控制的，使用这个变量的调用并不获取其所有权。因此，如果想要改变内部的值，需要像下面这样做
+let test = Arc::new(snapshot); let test_as_Ref = test.as_ref(); 这样就可以拿到原始值的引用，进行任意其他操作</description>
+    </item>
     <item>
       <title>Markdown Syntax Guide</title>
       <link>https://gleiphir2769.github.io/posts/markdown-syntax/</link>
@@ -47,15 +56,6 @@
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       <guid>https://gleiphir2769.github.io/posts/emoji-support/</guid>
       <description>Guide to emoji usage in Hugo</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gleiphir2769.github.io/posts/rc-arc%E7%9A%84%E7%94%A8%E6%B3%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gleiphir2769.github.io/posts/rc-arc%E7%9A%84%E7%94%A8%E6%B3%95/</guid>
-      <description>Rc/Arc的用法 如何获取Arc内部的值 Rust中如果想要在多个线程间共享变量T的所有权，必须使用Arc包裹T，通过clone wrapper使用该变量。
-使用中，T的所有权Arc所控制的，使用这个变量的调用并不获取其所有权。因此，如果想要改变内部的值，需要像下面这样做
-let test = Arc::new(snapshot); let test_as_Ref = test.as_ref(); 这样就可以拿到原始值的引用，进行任意其他操作</description>
     </item>
   </channel>
 </rss>
